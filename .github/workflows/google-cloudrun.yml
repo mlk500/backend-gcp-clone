@@ -57,7 +57,7 @@ env:
   REGION: us-central1
   REPOSITORY: backend-gcp-repo
   WORKLOAD_IDENTITY_PROVIDER: projects/791214719127/locations/global/workloadIdentityPools/github/providers/my-repo
-  SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
+  SERVICE_ACCOUNT: gcr-back@backend-servers-439810.iam.gserviceaccount.com
 
 
 jobs:
