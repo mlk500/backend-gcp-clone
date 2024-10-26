@@ -87,8 +87,10 @@ jobs:
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
-          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ env.SERVICE_ACCOUNT }}
+          workload_identity_provider: projects/791214719127/locations/global/workloadIdentityPools/github-pool-123/providers/my-repo
+          service_account: github-cicd@backend-servers-439810.iam.gserviceaccount.com
+#          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
+#          service_account: ${{ env.SERVICE_ACCOUNT }}
           token_format: 'access_token'
 
 
