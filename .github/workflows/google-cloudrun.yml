@@ -56,7 +56,7 @@ env:
   SERVICE: backend-gcp-clone
   REGION: us-central1
   REPOSITORY: backend-gcp-repo
-  WORKLOAD_IDENTITY_PROVIDER: ${{ secrets.WIF_PROVIDER }}
+  WORKLOAD_IDENTITY_PROVIDER: projects/791214719127/locations/global/workloadIdentityPools/github/providers/my-repo
   SERVICE_ACCOUNT: ${{ secrets.WIF_SERVICE_ACCOUNT }}
 
 
