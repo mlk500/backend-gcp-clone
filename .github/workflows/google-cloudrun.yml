@@ -56,8 +56,8 @@ env:
   SERVICE: backend-gcp-clone
   REGION: us-central1
   REPOSITORY: backend-gcp-repo
-  WORKLOAD_IDENTITY_PROVIDER: projects/791214719127/locations/global/workloadIdentityPools/github-pool-123/providers/my-repo
-  SERVICE_ACCOUNT: github-cicd@backend-servers-439810.iam.gserviceaccount.com
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/791214719127/locations/global/workloadIdentityPools/github-pool-123/providers/my-repo'
+  SERVICE_ACCOUNT: 'github-cicd@backend-servers-439810.iam.gserviceaccount.com'
 
 
 jobs:
