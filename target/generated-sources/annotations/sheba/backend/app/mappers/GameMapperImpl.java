@@ -12,7 +12,7 @@ import sheba.backend.app.entities.Unit;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-10-06T13:08:01+0300",
+    date = "2024-10-26T14:48:28+0300",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.7 (Oracle Corporation)"
 )
 @Component
