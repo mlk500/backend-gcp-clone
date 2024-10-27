@@ -15,6 +15,7 @@ import sheba.backend.app.repositories.UnitRepository;
 import jakarta.persistence.EntityNotFoundException;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
@@ -93,13 +94,20 @@ public class ObjectLocationBL {
         return unitRepository.findByObject(checkObject) != null && !unitRepository.findByObject(checkObject).isEmpty();
     }
 
+//    public List<ObjectLocation> getAllObjects() {
+//        List<ObjectLocation> objects = locationObjectRepository.findAll();
+//        for (ObjectLocation obj : objects) {
+//            if (obj.getObjectImages() == null || obj.getObjectImages().isEmpty()) {
+//                objects.remove(obj);
+//            }
+//        }
+//        return objects;
+//    }
+
     public List<ObjectLocation> getAllObjects() {
         List<ObjectLocation> objects = locationObjectRepository.findAll();
-        for (ObjectLocation obj : objects) {
-            if (obj.getObjectImages() == null || obj.getObjectImages().isEmpty()) {
-                objects.remove(obj);
-            }
-        }
+
+        objects.removeIf(obj -> obj.getObjectImages() == null || obj.getObjectImages().isEmpty());
         return objects;
     }
 
