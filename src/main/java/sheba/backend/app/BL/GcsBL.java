@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class GcsBL {
 
     private final Storage storage;
-    private final String bucketName = "project-files-storage";
+    private final String bucketName = "project-files-storage-clone";
     private static final Logger logger = LoggerFactory.getLogger(GcsBL.class);
 
 
