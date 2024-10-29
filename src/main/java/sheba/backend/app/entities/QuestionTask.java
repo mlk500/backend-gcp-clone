@@ -3,12 +3,14 @@ package sheba.backend.app.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
 @Entity
 @Table(name = "question_task")
 @Data
+@ToString(exclude = "task")
 public class QuestionTask {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

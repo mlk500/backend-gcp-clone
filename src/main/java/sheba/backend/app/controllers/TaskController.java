@@ -76,11 +76,18 @@ public class TaskController {
             @RequestParam(value = "originalTask") Long originalTaskID) {
         try {
             Task newTask = taskBL.duplicateTask(task, questionTask, media, sectorAdmin, existingMedia, originalTaskID);
-            return ResponseEntity.ok(newTask);
+            if (newTask == null){
+                System.out.println("its null");
+            }
+            return ResponseEntity.ok().body("Task was duplicated successfully");
         } catch (TaskCannotBeEmpty | IllegalArgumentException | AdminNotFound e) {
             return ResponseEntity.badRequest().body("Error updating task: " + e.getMessage());
         } catch (MediaUploadFailed e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error with media: " + e.getMessage());
+        }
+        catch (Exception e) {
+            System.out.println("the error is " + e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error duplicating task " + e.getMessage());
         }
     }
 
