@@ -16,10 +16,6 @@ public class MediaTask {
     private String mediaPath;
     private String mediaType;
     private String mediaUrl;
-//    private long fileSize;
-
-//    @Temporal(TemporalType.TIMESTAMP)
-//    private Date uploadedDate = new Date();
 
     @JsonIgnore
     @ManyToOne
